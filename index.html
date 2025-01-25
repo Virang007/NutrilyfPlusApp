@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutrilyfPlus</title>
+    <link rel="icon" href="logor.png" type="image/png">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #e8f5e9;
+            /* Light green */
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            background-color: transparent;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #4caf50;
+            /* Green */
+        }
+
+        .logo img {
+            width: 60px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 1em;
+        }
+
+        nav ul li a:hover {
+            color: #4caf50;
+        }
+
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 10%;
+            background: linear-gradient(135deg, #c8e6c9, #e8f5e9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background-color: #2e7d32;
+            /* Dark green */
+            border-radius: 50%;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero .content {
+            max-width: 50%;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            color: #1b5e20;
+            /* Dark green */
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            color: #2d2d2d;
+            margin-bottom: 40px;
+        }
+
+        .hero .buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .hero .buttons button {
+            padding: 15px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .hero .buttons .download {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        .hero .buttons .learn-more {
+            background-color: transparent;
+            color: #4caf50;
+            border: 2px solid #4caf50;
+        }
+
+        .hero .image {
+            max-width: 40%;
+            z-index: 2;
+        }
+
+        .hero .image img {
+            width: 80%;
+            border-radius: 20px;
+        }
+
+        section {
+            padding: 50px 10%;
+        }
+
+        #ScreensShot .images {
+            display: flex;
+            justify-content: center;
+            /* Centers the images */
+            gap: 20px;
+            flex-wrap: wrap;
+            /* Allow images to wrap on smaller screens */
+            overflow-x: auto;
+            /* Allows horizontal scrolling if images exceed container width */
+        }
+
+        #ScreensShot .images img {
+            width: 20vw;
+            /* 20% of the viewport width for each image */
+            max-width: 200px;
+            /* Maximum width */
+            min-width: 120px;
+            /* Minimum width */
+            height: auto;
+            /* Maintains the aspect ratio */
+            object-fit: cover;
+            /* Scales the image to cover the container without distortion */
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #Video {
+            text-align: center;
+            /* Centers the content inside the section */
+        }
+
+        .video-container {
+            display: flex;
+            /* Flexbox to align videos side by side */
+            justify-content: center;
+            /* Centers the videos horizontally */
+            gap: 20px;
+            /* Adds space between the videos */
+            flex-wrap: wrap;
+            /* Wraps videos if the screen size is too small */
+            max-width: 100%;
+        }
+
+        .video iframe {
+            width: 100%;
+            /* Make iframe responsive */
+            max-width: 560px;
+            /* Limit the maximum width */
+            height: auto;
+            /* Keeps the aspect ratio */
+        }
+
+
+        footer {
+            background-color: #b7f6b8;
+            /* Dark background */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo img {
+            width: 50%;
+            /* Adjust the size of the logo */
+            margin-right: 10px;
+        }
+
+        .footer-text {
+            flex: 1;
+            text-align: center;
+        }
+
+        .college-image {
+            text-align: center;
+        }
+
+        .college-image img {
+            width: 80px;
+            /* Adjust the size of the college logo */
+        }
+        .footer-text a {
+    text-decoration: none;
+    color: #4caf50; /* Green color for Privacy Policy */
+}
+
+.footer-text a:hover {
+    color: #2e7d32; /* Darker green on hover */
+}
+
+.footer-text p {
+    color: #333; /* Dark text color */
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logor.png" alt="NutrilyfPlus">
+            NutrilyfPlus
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#ScreensShot">Applications</a></li>
+                <li><a href="#Video">Demo</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="content">
+            <h1>Join Us NutrilyfPlus</h1>
+            <p>NutrilyfPlus is Personal diet assistant for athletes to track nutrition and plan meals.</p>
+            <div class="buttons">
+                <a href="https://play.google.com/store/apps/details?id=com.svitclg.nutrilyfPlus" target="_blank">
+                    <button class="download">Download</button>
+                </a>
+            </div>
+        </div>
+        <div class="image">
+            <img src="demo9r.png" alt="App Screenshot">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About NutrilyfPlus</h2>
+        <p><strong>NutrilyfPlus</strong> is a personal diet assistant designed specifically for athletes, offering
+            personalized diet plans, real-time nutrition tracking, and meal planning tools to optimize athletic
+            performance. Whether you're aiming to build muscle, improve stamina, or recover from training, our app
+            provides curated diets backed by sports nutrition principles tailored to your specific needs.</p>
+        <p>Athletes, especially those in the intermediate stage, often struggle to find the right nutrition advice.
+            NutrilyfPlus bridges that gap by offering comprehensive, sport-specific diet plans and real-time tracking to
+            help you stay on top of your nutrition and achieve your fitness goals.</p>
+        <h3>Key Features:</h3>
+        <ul>
+            <li><strong>Custom Diet Plans</strong>: Personalized plans based on sport, fitness goals, and dietary
+                preferences.</li>
+            <li><strong>Real-Time Nutrition Tracking</strong>: Track your nutrient intake to stay on top of your diet.
+            </li>
+            <li><strong>Meal Planning</strong>: Curated meal plans designed to meet your specific needs.</li>
+            <li><strong>Progress Monitoring</strong>: Track your improvements and adjust your plans as necessary.</li>
+        </ul>
+        <p>With <strong>NutrilyfPlus</strong>, athletes of all levels can access the guidance they need to fuel their
+            bodies, enhance their performance, and maintain healthier eating habits.</p>
+    </section>
+
+    <section id="ScreensShot">
+        <h2>Application </h2>
+        <div class="images">
+            <img src="image1.png" alt="Screenshot 1">
+            <img src="image2.png" alt="Screenshot 2">
+            <img src="image3.png" alt="Screenshot 3">
+            <img src="image4.png" alt="Screenshot 4">
+            <img src="image9.png" alt="Screenshot 5">
+        </div>
+    </section>
+
+    <section id="Video">
+        <h2>NutrilyfPlus Application Demo</h2>
+        <p>Watch a short video to see how NutrilyfPlus works.</p>
+        <div class="video-container">
+            <!-- First Video -->
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+
+            <!-- Second Video -->
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="logo.png" alt="NutrilyfPlus Logo" width="50">
+            </div>
+            <div class="footer-text">
+                <p>&copy; 2025 NutrilyfPlus. All rights reserved.</p>
+                <p><a href="#">Privacy Policy</a></p>
+                <p>
+                    <strong>App Name:</strong> NutrilyfPlus<br>
+                    <strong>Contact:</strong> <a href="vatsrajshreya.7@gmail.com" style="color: black;">vatsrajshreya.7@gmail.com</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    
+
+</body>
+
+</html>
